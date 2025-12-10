@@ -35,7 +35,7 @@ body {
 .background-gradient {
   position: absolute;
   inset: 0;
-  min-height: 330vh; /* corrigido */
+  min-height: 2500px; /* corrigido */
   height: auto;
   /* NOVO GRADIENTE:
      - Começa com a cor da seção de baixo, mas totalmente transparente (0% de opacidade)
@@ -166,6 +166,56 @@ body {
   opacity: 0.9;
 }
 
+/* ========= FAIXA BRANCA (CTA) ========= */
+.faixa-branca-wrapper {
+  position: relative;
+  z-index: 6;           /* fica acima do gradiente azul */
+  margin-top: -40px;    /* faz a faixa "subir" e encostar na curva azul */
+  display: flex;
+  justify-content: center;
+}
+
+.faixa-branca {
+    position: relative;
+  width: 100%;
+  background: #ffffff;
+  border: 2px solid #0594ff;
+  border-radius: 0 0 10px 10px; /* se quiser com cantos só embaixo */
+  /* se quiser todos os cantos arredondados:
+     border-radius: 10px; */
+  padding: 20px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+  bottom: -300px;
+}
+
+.faixa-branca-botoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.faixa-branca-botao {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 999px;
+  border: none;
+  background: #003182;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.faixa-branca-botao:hover {
+  filter: brightness(1.1);
+}
+
+
+
 /* ========= SEÇÃO EXPERIENCIA ========= */
 .experience-section {
   padding: 150px 40px;
@@ -233,12 +283,12 @@ body {
     color: #fff;
     text-shadow: 1px 2px 0px rgba(179, 179, 0);
 }
-
 /* Imagem Via Mangue */
 
 /* Imagem Triplicação PE-015 */
 .grupo-img01 {
-  position: relative; 
+  position: relative;
+  width: 250px; 
   bottom: 280px;
   left: 400px;
 }
@@ -286,9 +336,10 @@ body {
 
 /* Imagem Duplicação BR - 232 PE */
 .grupo-img02 {
-  position: relative; 
+  position: relative;
+  width: 250px; 
   bottom: 280px;
-  left: 900px;
+  left: 1500px;
 }
 
 .forma-img02 {
@@ -302,7 +353,7 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 70px;
   position: absolute;
-  top: 50px;
+  top: 20px;
   left: 0;
   z-index: 5;
 }
@@ -317,14 +368,67 @@ body {
   border-top-right-radius: 60px;
   border-top-left-radius: 30px;
   position: absolute;
-  top: 35px;  
-  left: -15px;
-  
+  top: 10px;  
+  left: -15px;  
+}
+
+.txt_duplicacao-pe {
+    position: relative;
+    left: 5px;
+    bottom: -180px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 1px 2px 0px rgba(179, 179, 0);
 }
 /* Imagem Duplicação BR - 232 PE */
 
+/* Imagem Via Mangue */
+.grupo-img03 {
+  position: relative;
+  left: 1100px;
+  bottom: 450px;  
+}
 
+.forma-img03 {
+  width: 250px;
+  height: 150px;
+  background-image: url(../src/img/Via-mangue.jpg);
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 10px;
+  position: relative;
+  top: 50px;
+  z-index: 5;
+}
 
+.base-img03 {
+    width: 0;
+    height: 0;
+    border-left: 180px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom:180px solid #B3B300;
+    border-bottom-left-radius: 80px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 30px;
+    position: relative;
+    bottom: 115px;
+    left: 80px;
+}
+
+.txt_pavimentacao-pi {
+    position: relative;
+    left: -50px;
+    bottom: 110px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 1px 2px 0px rgba(179, 179, 0);
+}
+/* Imagem Via Mangue */
 
 
 
