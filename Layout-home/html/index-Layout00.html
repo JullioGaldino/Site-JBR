@@ -28,12 +28,11 @@
 
       <nav class="main-navigation" aria-label="Navegação principal">
         <ul class="nav-list">
-          <li><a href="#sobre" class="nav-link">SOBRE A EMPRESA</a></li>
-          <li><a href="#servicos" class="nav-link">SERVIÇOS</a></li>
-          <li><a href="#clientes" class="nav-link">CLIENTES</a></li>
-          <li><a href="#portfolio" class="nav-link">PORTFÓLIO</a></li>
-          <li><a href="#portfolio-2" class="nav-link">PORTFÓLIO</a></li>
-          <li><a href="#instituto" class="nav-link">INSTITUTO</a></li>
+          <li><a href="/Layout-sobre/html/index.html" class="nav-link">SOBRE A EMPRESA</a></li>
+          <li><a href="/Layout-servicos/html/index-servicos.html" class="nav-link">SERVIÇOS</a></li>
+          <li><a href="/Layout-clientes/html/index-clientes.html" class="nav-link">CLIENTES</a></li>
+          <li><a href="/Layout-portfolio/html/index-portfolio.html" class="nav-link">PORTFÓLIO</a></li>
+          <li><a href="/Layout-instituto/html/index-instituto.html" class="nav-link">INSTITUTO</a></li>
           <li><a href="#contato" class="nav-link">CONTATO</a></li>
         </ul>
       </nav>
@@ -109,18 +108,24 @@
     </section>
 
     <!-- Clientes -->
-     <section>
-        <div class="faixa-branca-wrapper">
-        <div class="faixa-branca">
-            <div class="faixa-branca-botoes">
-            <a href="#" class="faixa-branca-botao">Solicite uma proposta</a>
-            <a href="#" class="faixa-branca-botao">Fornecedores</a>
-            <a href="#" class="faixa-branca-botao">Trabalhe conosco</a>
-            <a href="#" class="faixa-branca-botao">Denúncias</a>
-            </div>
-        </div>
-        </div>
-     </section>
+     <div class="faixa-branca-wrapper">
+  <div class="faixa-branca">
+    <!-- SVG da onda: está posicionado por CSS para sobrepor o gradiente azul acima -->
+    <svg class="onda-topo" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,60 C200,0 440,10 720,40 C1000,70 1240,20 1440,0 L1440,140 L0,140 Z" fill="#ffffff"></path>
+    </svg>
+
+    <!-- seu conteúdo da faixa: botões, textos, etc -->
+    <div class="faixa-branca-conteudo">
+      <div class="faixa-branca-botoes">
+        <a class="faixa-branca-botao">Solicite uma proposta</a>
+        <a class="faixa-branca-botao">Fornecedores</a>
+        <a class="faixa-branca-botao">Trabalhe conosco</a>
+        <a class="faixa-branca-botao">Denúncias</a>
+      </div>
+    </div>
+  </div>
+</div>
 
   </div>
 </body>

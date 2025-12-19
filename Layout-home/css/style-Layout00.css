@@ -77,6 +77,8 @@ body {
   border-radius: 0 0 20px 20px;
 
   z-index: 10;
+  /* EFEITO: Transição suave para o caso de mudança de cor ou sombra */
+  transition: all 0.3s ease;
 }
 
 .logo {
@@ -94,6 +96,8 @@ body {
   color: #2b2b4a;
   font-size: 0.9rem;
   font-weight: 600;
+  /* EFEITO: Transição suave para o hover */
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -119,7 +123,7 @@ body {
   background: #e3e6ea;
   color: #333;
   padding: 5px 14px;
-  border-radius: 4px;
+  border-radius: 0px 0px 5px 5px;
   font-size: 0.75rem;
   font-weight: 600;
 }
@@ -164,56 +168,8 @@ body {
 .scroll-icon {
   width: 32px;
   opacity: 0.9;
+  animation: bounce 1.5s infinite;
 }
-
-/* ========= FAIXA BRANCA (CTA) ========= */
-.faixa-branca-wrapper {
-  position: relative;
-  z-index: 6;           /* fica acima do gradiente azul */
-  margin-top: -40px;    /* faz a faixa "subir" e encostar na curva azul */
-  display: flex;
-  justify-content: center;
-}
-
-.faixa-branca {
-    position: relative;
-  width: 100%;
-  background: #ffffff;
-  border: 2px solid #0594ff;
-  border-radius: 0 0 10px 10px; /* se quiser com cantos só embaixo */
-  /* se quiser todos os cantos arredondados:
-     border-radius: 10px; */
-  padding: 20px 40px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  box-sizing: border-box;
-  bottom: -300px;
-}
-
-.faixa-branca-botoes {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.faixa-branca-botao {
-  flex: 1;
-  text-align: center;
-  padding: 10px 0;
-  border-radius: 999px;
-  border: none;
-  background: #003182;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-}
-
-.faixa-branca-botao:hover {
-  filter: brightness(1.1);
-}
-
 
 
 /* ========= SEÇÃO EXPERIENCIA ========= */
@@ -224,8 +180,6 @@ body {
   position: relative;
   z-index: 3;
   height: 1000px;
-
-  /* empurra ainda mais a página para baixo */
   margin-top: 5vh;
 }
 
@@ -243,6 +197,13 @@ body {
 /* Imagem Via Mangue */
 .grupo-img00 {
   position: relative;  
+  width: 260px;
+  transition: transform 0.3s ease;
+}
+
+.grupo-img00:hover {
+    transform: scale(1.02);
+    width: 260px;
 }
 
 .forma-img00 {
@@ -291,6 +252,11 @@ body {
   width: 250px; 
   bottom: 280px;
   left: 400px;
+  transition: transform 0.3s ease;
+}
+
+.grupo-img01:hover {
+    transform: scale(1.02);
 }
 
 .forma-img01 {
@@ -340,6 +306,11 @@ body {
   width: 250px; 
   bottom: 280px;
   left: 1500px;
+  transition: transform 0.3s ease;
+}
+
+.grupo-img02:hover {
+    transform: scale(1.02);
 }
 
 .forma-img02 {
@@ -383,17 +354,23 @@ body {
 }
 /* Imagem Duplicação BR - 232 PE */
 
-/* Imagem Via Mangue */
+/* Imagem Pavimentação BR - 232 PI */
 .grupo-img03 {
   position: relative;
+  width: 260px;
   left: 1100px;
   bottom: 450px;  
+  transition: transform 0.3s ease;
+}
+
+.grupo-img03:hover {
+    transform: scale(1.02);
 }
 
 .forma-img03 {
   width: 250px;
   height: 150px;
-  background-image: url(../src/img/Via-mangue.jpg);
+  background-image: url(../src/img/Pavimentação-BR-235.jpg);
   background-size: cover;
   background-position: center;
   border-top-left-radius: 20px;
@@ -421,17 +398,119 @@ body {
 
 .txt_pavimentacao-pi {
     position: relative;
-    left: -50px;
+    left: 20px;
     bottom: 110px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 30px;
     color: #fff;
     text-shadow: 1px 2px 0px rgba(179, 179, 0);
 }
-/* Imagem Via Mangue */
+/* Imagem Pavimentação BR - 232 PI */
 
 
 
+/* ========= FAIXA BRANCA (CTA) ========= */
+.faixa-branca-wrapper {
+  position: relative;
+  z-index: 6;           
+  margin-top: -40px; 
+  display: flex;
+  justify-content: center;
+  overflow: visible;    
+}
+
+.faixa-branca {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  bottom: -500px;
+  background: #ffffff;
+  padding: 70px 40px 30px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  overflow: visible;
+}
+
+/* SVG da onda no topo (estático) */
+.onda-topo {
+  position: absolute;
+  top: -120px;           
+  left: 0;
+  width: 100%;
+  height: 160px;         
+  display: block;
+  pointer-events: none;  
+}
+
+
+/* ====== Conteúdo interno (exemplo de botões) ====== */
+.faixa-branca-conteudo {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faixa-branca-botoes {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+/* estilo dos botões (mantive similar ao que você tinha) */
+.faixa-branca-botao {
+  display: inline-block;
+  padding: 15px 22px;
+  border-radius: 28px;
+  background: #003182;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: filter .2s ease, transform .15s ease;
+  border: none;
+}
+
+.faixa-branca-botao:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+/* ====== Ajustes responsivos ====== */
+@media (max-width: 900px) {
+  .faixa-branca {
+    padding: 80px 20px 24px;
+  }
+  .faixa-branca-botoes {
+    gap: 12px;
+  }
+  .onda-topo {
+    top: -100px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faixa-branca {
+    padding: 90px 16px 20px;
+  }
+  .faixa-branca-botoes { gap: 10px; }
+  .faixa-branca-botao { padding: 8px 14px; font-size: 0.8rem; }
+  .onda-topo { top: -90px; height: 100px; }
+}
+
+
+
+/* ========= ANIMAÇÕES ========= */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
 
 
 /* ========= RESPONSIVO ========= */

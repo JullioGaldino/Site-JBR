@@ -1,0 +1,348 @@
+    /* ========= VARIÁVEIS ========= */
+    :root {
+        --jbr-blue: #003DA5;
+        --jbr-blue-dark: #002966;
+        --jbr-blue-light: #0052CC;
+        --jbr-yellow: #D4FF00;
+        --jbr-yellow-light: #E8FF4D;
+        --jbr-gray-dark: #2C3E50;
+        --jbr-gray-light: #F8F9FA;
+        --jbr-gray-border: #E8EAED;
+        --white: #FFFFFF;
+    }
+
+    /* ========= SEÇÃO CLIENTES ========= */
+    .clientes-section {
+        background: var(--white);
+        padding: 5rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Decoração de fundo */
+    .clientes-section::before {
+        content: '';
+        position: absolute;
+        top: -30%;
+        left: -10%;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, var(--jbr-blue) 0%, transparent 70%);
+        opacity: 0.05;
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    .clientes-section::after {
+        content: '';
+        position: absolute;
+        bottom: -20%;
+        right: -5%;
+        width: 350px;
+        height: 350px;
+        background: radial-gradient(circle, var(--jbr-yellow) 0%, transparent 70%);
+        opacity: 0.05;
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    /* Container */
+    .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 0 1rem;
+        }
+    }
+
+    /* ========= CABEÇALHO DA SEÇÃO ========= */
+    .clientes-header {
+        text-align: center;
+        margin-bottom: 4rem;
+        animation: fadeInDown 0.8s ease-out;
+    }
+
+    .clientes-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--jbr-blue);
+        margin-bottom: 1.5rem;
+        letter-spacing: -1px;
+    }
+
+    .clientes-intro {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.125rem;
+        color: var(--jbr-gray-dark);
+        max-width: 900px;
+        margin: 0 auto;
+        line-height: 1.8;
+    }
+
+    /* ========= GRID DE CLIENTES ========= */
+    .clientes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+        .clientes-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .clientes-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+        }
+    }
+
+    /* ========= CARDS DE CLIENTE ========= */
+    .cliente-card {
+        background: var(--white);
+        border-radius: 1.25rem;
+        padding: 2rem;
+        border: 2px solid var(--jbr-gray-border);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        animation: fadeInUp 0.6s ease-out;
+        box-shadow: 0 2px 8px rgba(0, 61, 165, 0.05);
+    }
+
+    /* Efeito hover no card */
+    .cliente-card:hover {
+        border-color: var(--jbr-yellow);
+        box-shadow: 0 10px 25px rgba(0, 61, 165, 0.12);
+        transform: translateY(-6px);
+    }
+
+    /* Decoração de fundo do card */
+    .cliente-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--jbr-yellow) 0%, transparent 70%);
+        opacity: 0.08;
+        border-radius: 0 0 0 100%;
+        z-index: 0;
+    }
+
+    /* ========= LOGO COM IMAGEM ========= */
+    .cliente-initial img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        display: block;
+        border-radius: 1rem;
+    }
+
+
+    /* ========= LOGO DO CLIENTE ========= */
+    .cliente-logo-wrapper {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .cliente-logo-placeholder {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, var(--jbr-blue) 0%, var(--jbr-blue-light) 100%);
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 61, 165, 0.15);
+    }
+
+    .cliente-card:hover .cliente-logo-placeholder {
+        transform: scale(1.08);
+        box-shadow: 0 8px 20px rgba(4, 21, 203, 0.535);
+    }
+
+    .cliente-initial {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--jbr-yellow);
+    }
+
+    /* ========= NOME DO CLIENTE ========= */
+    .cliente-nome {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--jbr-gray-dark);
+        line-height: 1.5;
+        position: relative;
+        z-index: 1;
+        margin: 0;
+    }
+
+    /* ========= RODAPÉ DA SEÇÃO ========= */
+    .clientes-footer {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 2px solid var(--jbr-gray-border);
+        animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    .clientes-footer-text {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        color: var(--jbr-gray-dark);
+        max-width: 900px;
+        margin: 0 auto;
+        line-height: 1.8;
+    }
+
+    /* ========= ANIMAÇÕES ========= */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ========= RESPONSIVIDADE ========= */
+    @media (max-width: 768px) {
+        .clientes-section {
+            padding: 3rem 0;
+        }
+
+        .clientes-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .clientes-intro {
+            font-size: 1rem;
+        }
+
+        .clientes-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .cliente-card {
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+
+        .cliente-logo-placeholder {
+            width: 80px;
+            height: 80px;
+        }
+
+        .cliente-initial {
+            font-size: 2rem;
+        }
+
+        .cliente-nome {
+            font-size: 0.9rem;
+        }
+
+        .clientes-grid {
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .clientes-section {
+            padding: 2rem 0;
+        }
+
+        .clientes-title {
+            font-size: 1.75rem;
+        }
+
+        .clientes-intro {
+            font-size: 0.95rem;
+        }
+
+        .cliente-card {
+            padding: 1.25rem;
+        }
+
+        .cliente-logo-placeholder {
+            width: 70px;
+            height: 70px;
+        }
+
+        .cliente-initial {
+            font-size: 1.75rem;
+        }
+
+        .cliente-nome {
+            font-size: 0.85rem;
+        }
+
+        .clientes-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .clientes-footer-text {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* ========= ACESSIBILIDADE ========= */
+    .cliente-card:focus-within {
+        outline: 2px solid var(--jbr-blue);
+        outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .cliente-card,
+        .cliente-logo-placeholder,
+        .clientes-header,
+        .clientes-footer {
+            animation: none;
+            transition: none;
+        }
+    }

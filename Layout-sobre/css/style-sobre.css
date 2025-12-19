@@ -1,0 +1,205 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Google Fonts - Poppins and Inter */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* JBR Engenharia Brand Colors */
+  --jbr-blue: #003DA5;
+  --jbr-blue-dark: #002966;
+  --jbr-yellow: #D4FF00;
+  --jbr-yellow-light: #E8FF4D;
+  --jbr-gray-dark: #2C3E50;
+  --jbr-gray-light: #F8F9FA;
+  
+  --primary: #003DA5;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #003DA5;
+  --sidebar-primary-foreground: #FFFFFF;
+  --chart-1: #003DA5;
+  --chart-2: #0052CC;
+  --chart-3: #1E40AF;
+  --chart-4: #1E3A8A;
+  --chart-5: #1E40AF;
+  --radius: 1rem;
+  --background: #FFFFFF;
+  --foreground: #2C3E50;
+  --card: #FFFFFF;
+  --card-foreground: #2C3E50;
+  --popover: #FFFFFF;
+  --popover-foreground: #2C3E50;
+  --secondary: #F8F9FA;
+  --secondary-foreground: #2C3E50;
+  --muted: #E8EAED;
+  --muted-foreground: #5F6368;
+  --accent: #D4FF00;
+  --accent-foreground: #003DA5;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E8EAED;
+  --input: #F8F9FA;
+  --ring: #003DA5;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #2C3E50;
+  --sidebar-accent: #D4FF00;
+  --sidebar-accent-foreground: #003DA5;
+  --sidebar-border: #E8EAED;
+  --sidebar-ring: #003DA5;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* JBR Custom Components */
+  .jbr-hero-section {
+    @apply relative w-full overflow-hidden;
+    background: linear-gradient(135deg, #003DA5 0%, #0052CC 100%);
+  }
+
+  .jbr-accent-box {
+    @apply relative rounded-2xl overflow-hidden border-4;
+    border-color: #D4FF00;
+    box-shadow: 0 10px 30px rgba(0, 61, 165, 0.15);
+  }
+
+  .jbr-accent-box-sm {
+    @apply relative rounded-xl overflow-hidden border-3;
+    border-color: #D4FF00;
+  }
+
+  .jbr-diagonal-divider {
+    @apply relative w-full h-24;
+    background: #003DA5;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+  }
+
+  .jbr-diagonal-divider-inverse {
+    @apply relative w-full h-24;
+    background: #FFFFFF;
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .jbr-value-badge {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-full font-semibold;
+    background-color: #D4FF00;
+    color: #003DA5;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .jbr-cta-button {
+    @apply px-8 py-3 rounded-full font-bold text-lg transition-all duration-300;
+    background-color: #D4FF00;
+    color: #003DA5;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .jbr-cta-button:hover {
+    @apply transform -translate-y-1;
+    box-shadow: 0 15px 40px rgba(212, 255, 0, 0.3);
+  }
+
+  .jbr-section-title {
+    @apply text-4xl md:text-5xl font-bold;
+    font-family: 'Poppins', sans-serif;
+    color: #003DA5;
+  }
+
+  .jbr-section-subtitle {
+    @apply text-lg md:text-xl;
+    color: #5F6368;
+    font-family: 'Inter', sans-serif;
+  }
+}
