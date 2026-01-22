@@ -1,0 +1,168 @@
+/* ===================================
+   SEÇÃO DE CLIENTES - INTEGRADA AO AZUL
+   =================================== */
+
+.clientes-wrapper {
+  position: relative;
+  z-index: 6;
+  width: 100%;
+  /* Removido background-color branco */
+}
+
+/* Removida a onda de entrada dos clientes para integrar ao azul */
+.onda-clientes {
+  display: none;
+}
+
+.clientes-section {
+  width: 100%;
+  position: relative;
+  z-index: 7;
+  padding-bottom: 300px; /* Espaço antes do rodapé */
+}
+
+.clientes-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff; /* Texto agora branco para contrastar com o azul */
+  margin-bottom: 50px;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  padding: 60px 40px 0 40px;
+}
+
+/* Grid de Clientes */
+.clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  margin-bottom: 0;
+  align-items: center;
+  justify-items: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+}
+
+.cliente-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+}
+
+.cliente-logo-wrapper {
+  position: relative;           /* necessário para overlay */
+  overflow: hidden;             /* corta overlay dentro do card */
+  width: 100%;
+  height: 140px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cliente-logo-wrapper:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-6px);
+}
+
+.cliente-logo-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #b3b300b6;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.cliente-nome {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.759);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px;
+  opacity: 0;                   /* começa invisível */
+  transform: translateY(10px);  /* leve animação */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cliente-logo-wrapper:hover::before {
+  opacity: 1;
+}
+
+.cliente-logo-wrapper:hover .cliente-nome {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cliente-logo {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .clientes-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .clientes-title {
+    font-size: 2.2rem;
+    padding: 50px 30px 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clientes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .clientes-title {
+    font-size: 1.8rem;
+    padding: 40px 20px 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clientes-grid {
+    grid-template-columns: 1fr;
+  }
+  .clientes-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cliente-item { animation: fadeInUp 0.6s ease-out forwards; }
+.cliente-item:nth-child(1) { animation-delay: 0.1s; }
+.cliente-item:nth-child(2) { animation-delay: 0.2s; }
+.cliente-item:nth-child(3) { animation-delay: 0.3s; }
+.cliente-item:nth-child(4) { animation-delay: 0.4s; }
+.cliente-item:nth-child(5) { animation-delay: 0.5s; }
+.cliente-item:nth-child(6) { animation-delay: 0.6s; }
+.cliente-item:nth-child(7) { animation-delay: 0.7s; }
+.cliente-item:nth-child(8) { animation-delay: 0.8s; }
+.cliente-item:nth-child(9) { animation-delay: 0.9s; }
+.cliente-item:nth-child(10) { animation-delay: 1s; }

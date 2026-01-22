@@ -1,0 +1,159 @@
+/* ========= RESET ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #ffffff;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ========= LAYOUT BASE ========= */
+.layout {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ========= HERO BACKGROUND ========= */
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 100vh; /* corrigido */
+  height: auto;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.6);
+}
+
+/* Camada azul em cima da foto, agora com transição suave */
+.background-gradient {
+  position: absolute;
+  inset: 0;
+  min-height: 2500px; /* corrigido */
+  height: auto;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 61, 181, 0) 0%,
+    #003db5 30%
+  );
+  z-index: 3;
+}
+
+
+/* ========= OVERLAYS (fix invisíveis) ========= */
+.hero-overlay,
+.content-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+
+/* ========= HERO CONTENT ========= */
+.hero-section {
+  position: relative;
+  z-index: 5;
+  padding-top: 30vh;
+  padding-left: 60px;
+
+  /* ESSENCIAL PARA HABILITAR O SCROLL */
+  padding-bottom: 40vh;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.subtitle-highlight {
+  color: #c7d430;
+  font-weight: 700;
+}
+
+/* ========= SCROLL INDICATOR ========= */
+.scroll-indicator {
+  position: relative;
+  z-index: 5;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.scroll-icon {
+  width: 32px;
+  opacity: 0.9;
+  animation: bounce 1.5s infinite;
+}
+
+
+/* ====== Ajustes responsivos ====== */
+@media (max-width: 900px) {
+  .faixa-branca {
+    padding: 80px 20px 24px;
+  }
+  .faixa-branca-botoes {
+    gap: 12px;
+  }
+  .onda-topo {
+    top: -100px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faixa-branca {
+    padding: 90px 16px 20px;
+  }
+  .faixa-branca-botoes { gap: 10px; }
+  .faixa-branca-botao { padding: 8px 14px; font-size: 0.8rem; }
+  .onda-topo { top: -90px; height: 100px; }
+}
+
+
+
+/* ========= ANIMAÇÕES ========= */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+/* ========= RESPONSIVO ========= */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+
+  .hero-section {
+    padding-left: 20px;
+    padding-top: 28vh;
+    padding-bottom: 30vh; /* ainda precisa do padding */
+  }
+
+  .hero-title {
+    font-size: 2.7rem;
+  }
+
+  .experience-title {
+    font-size: 1.8rem;
+  }
+}

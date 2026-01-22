@@ -1,0 +1,173 @@
+/* ========= SEÇÃO EXPERIENCIA ========= */
+.experience-section {
+  margin-top: 550px;
+  text-align: left;
+  color: #ffffff;
+  position: relative;
+  z-index: 3;
+  min-height: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 40px; /* Espaçamento entre os blocos */
+  justify-content: center;
+}
+
+.experience-title {
+  width: 100%;
+  font-size: 2.6rem;
+  font-weight: 700;
+  position: relative;
+  text-align: left;
+  left: 40px; 
+}
+
+.experience-highlight {
+  color: #c7d430;
+}
+
+/* Estilo Genérico para os Grupos (Aplica a todos) */
+[class^="grupo-img"] {
+  position: relative;  
+  width: 350px;
+  transition: transform 0.3s ease;
+  margin-bottom: 40px;
+}
+
+[class^="grupo-img"]:hover {
+    transform: scale(1.12);
+}
+
+
+
+[class^="card-btn"] {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  top: -90px;
+  left: 100px;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 2rem;
+  background: #B3B300;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 6;
+}
+[class^="grupo-img"]:hover [class^="card-btn"] {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(212, 255, 0, 0.3);
+}
+
+
+[class^="forma-img"] {
+  width: 350px;
+  height: 180px;
+  background-size: cover;
+  background-position: center;  
+  position: relative;
+  top: 50px;
+  z-index: 5;
+  border: 2px solid #B3B300;
+}
+
+
+
+[class^="txt_"] {
+    position: relative;
+    top: 60px;
+    z-index: 2;
+    right: 0%;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* ========= HERO SECTION ========= */
+.bt-projetos {
+    
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 400px;
+    z-index: 3;
+}
+
+.bt-projetos::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #B3B300 0%, transparent 70%);
+    opacity: 0.1;
+    border-radius: 50%;
+}
+
+.bt-content {
+    position: relative;
+    z-index: 1;
+}
+
+.bt-cta {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #B3B300;
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.bt-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(212, 255, 0, 0.3);
+}
+
+
+/* --- CONFIGURAÇÕES ESPECÍFICAS DE IMAGENS --- */
+
+/* 00 - Via Mangue */
+.forma-img00 { background-image: url(/Global-soucers/img/Projetos/Projeto-Via-Mangue.jpg); }
+
+/* 01 - Triplicação PE - 015 */
+.forma-img01 { background-image: url(/Global-soucers/img/Projetos/Triplicação-PE.jpg); }
+
+/* 02 - Duplicação BR - 232 PE */
+.forma-img02 { background-image: url(/Global-soucers/img/Projetos/Duplicação-BR-232-PE.jpg); }
+
+/* 03 - Pavimentação BR - 232 PI */
+.forma-img03 { background-image: url(/Global-soucers/img/Projetos/Pavimentação-BR-135-PI.jpg); }
+
+/* 04 - Ponte Rio São Francisco */
+.forma-img04 { background-image: url(/Global-soucers/img/Projetos/Ponte-sobre-rio-sao-francisco.jpg); }
+
+/* 05 - Expansão do Metrô de Recife */
+.forma-img05 { background-image: url(/Global-soucers/img/Projetos/Expansão-do-Metrô-de-Recife.jpg); }
+
+/* 06 - Honda - Amazonas */
+.forma-img06 { background-image: url(/Global-soucers/img/Projetos/Moto-Honda-da-Amazônia.jpg); }
+
+/* 07 - Ferrovia Transnordestina */
+.forma-img07 { background-image: url(/Global-soucers/img/Projetos/Ferrovia-Transnordestina.jpg); }
+
+/* 08 - Refinaria Abreu e Lima */
+.forma-img08 { background-image: url(/Global-soucers/img/Projetos/Refinaria-Abreu-e-Lima.jpg); }

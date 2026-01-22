@@ -3,7 +3,7 @@
         --jbr-blue: #003DA5;
         --jbr-blue-dark: #002966;
         --jbr-blue-light: #0052CC;
-        --jbr-yellow: #D4FF00;
+        --jbr-yellow: #B3B300;
         --jbr-yellow-light: #E8FF4D;
         --jbr-gray-dark: #2C3E50;
         --jbr-gray-light: #F8F9FA;
@@ -117,7 +117,7 @@
 
     /* ========= CARDS DE CLIENTE ========= */
     .cliente-card {
-        background: var(--white);
+        background: var(--jbr-gray-light);
         border-radius: 1.25rem;
         padding: 2rem;
         border: 2px solid var(--jbr-gray-border);
@@ -176,26 +176,25 @@
     .cliente-logo-placeholder {
         width: 100px;
         height: 100px;
-        background: linear-gradient(135deg, var(--jbr-blue) 0%, var(--jbr-blue-light) 100%);
         border-radius: 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 12px rgba(0, 61, 165, 0.15);
-    }
-
-    .cliente-card:hover .cliente-logo-placeholder {
-        transform: scale(1.08);
-        box-shadow: 0 8px 20px rgba(4, 21, 203, 0.535);
+        overflow: hidden;
     }
 
     .cliente-initial {
-        font-family: 'Poppins', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--jbr-yellow);
+        width: 100%;
+        height: 100%;
+        display: block;
     }
+
+    .cliente-initial img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
 
     /* ========= NOME DO CLIENTE ========= */
     .cliente-nome {

@@ -1,0 +1,106 @@
+/* ===================================
+   RODAPÉ - DESIGN IDÊNTICO À IMAGEM
+   =================================== */
+
+.footer {
+  position: relative;
+  top: 120px;
+  z-index: 10;
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 100px; /* Espaço maior para a onda fluida */
+}
+
+/* SVG da onda fluida e suave conforme a imagem */
+.onda-footer {
+  position: absolute;
+  top: -159px; /* Posicionamento para a onda subir sobre o azul */
+  left: 0;
+  width: 100%;
+  height: 160px;
+  display: block;
+  pointer-events: none;
+  z-index: 9;
+}
+
+/* Conteúdo da faixa branca */
+.footer-content {
+  position: relative;
+  z-index: 11;
+  padding: 20px 40px 40px; /* Padding reduzido no topo para alinhar os botões */
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container dos botões - Alinhamento horizontal perfeito */
+.footer-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+/* Estilo dos botões idêntico à imagem (Azul Marinho, Cantos Arredondados) */
+.footer-button {
+  display: inline-block;
+  padding: 12px 35px;
+  border-radius: 35px;
+  background-color: #002664; /* Azul marinho profundo da imagem */
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  white-space: nowrap;
+}
+
+.footer-button:hover {
+  background-color: #001a4d;
+  transform: scale(1.02);
+}
+
+/* Responsividade para manter o design em telas menores */
+@media (max-width: 1100px) {
+  .footer-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+  .footer-buttons {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-buttons {
+    flex-wrap: wrap;
+  }
+  .footer-button {
+    flex: 1 1 calc(50% - 10px);
+    text-align: center;
+  }
+  .onda-footer {
+    top: -119px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-button {
+    flex: 1 1 100%;
+    font-size: 0.9rem;
+  }
+  .footer-content {
+    padding: 20px 15px 30px;
+  }
+  .onda-footer {
+    top: -89px;
+    height: 90px;
+  }
+}

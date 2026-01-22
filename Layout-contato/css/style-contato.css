@@ -1,0 +1,401 @@
+        /* ========= VARIÁVEIS ========= */
+        :root {
+            --jbr-blue: #003DA5;
+            --jbr-blue-dark: #002966;
+            --jbr-blue-light: #0052CC;
+            --jbr-yellow: #B3B300;
+            --jbr-yellow-light: #E8FF4D;
+            --jbr-gray-dark: #2C3E50;
+            --jbr-gray-light: #F8F9FA;
+            --jbr-gray-border: #E8EAED;
+            --white: #FFFFFF;
+        }
+
+        /* ========= RESET ========= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--jbr-gray-dark);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        /* ========= CONTAINER ========= */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* ========= HERO SECTION ========= */
+        .hero-section {
+            background: linear-gradient(135deg, var(--jbr-blue) 0%, var(--jbr-blue-dark) 100%);
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--jbr-yellow) 0%, transparent 70%);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.25rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-section {
+                padding: 3rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.75rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-section {
+                padding: 2rem 0;
+            }
+        }
+
+        /* ========= SEÇÃO CONTATO ========= */
+        .contact-section {
+            padding: 5rem 0;
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        /* ========= INFORMAÇÕES DE CONTATO ========= */
+        .contact-info-box {
+            background: var(--jbr-gray-light);
+            padding: 3rem;
+            border-radius: 1rem;
+            border-left: 4px solid var(--jbr-yellow);
+        }
+
+        .contact-info-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--jbr-blue);
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            margin-bottom: 2.5rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--jbr-blue) 0%, var(--jbr-blue-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--jbr-yellow);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-content h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--jbr-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-content p {
+            font-size: 0.95rem;
+            color: var(--jbr-gray-dark);
+            line-height: 1.6;
+        }
+
+        .contact-content a {
+            color: var(--jbr-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-content a:hover {
+            color: var(--jbr-yellow);
+        }
+
+        /* ========= FORMULÁRIO DE CONTATO ========= */
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 1rem;
+            border: 2px solid var(--jbr-gray-border);
+            box-shadow: 0 4px 15px rgba(0, 61, 165, 0.08);
+        }
+
+        .form-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--jbr-blue);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: var(--jbr-blue);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--jbr-gray-border);
+            border-radius: 0.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--jbr-gray-dark);
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--jbr-yellow);
+            box-shadow: 0 0 0 3px rgba(212, 255, 0, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--jbr-blue) 0%, var(--jbr-blue-light) 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 61, 165, 0.2);
+        }
+
+        .form-button:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-info-box,
+            .contact-form {
+                padding: 2rem;
+            }
+        }
+
+        /* ========= SEÇÃO MAPA ========= */
+        .map-section {
+            padding: 5rem 0;
+            background: var(--jbr-gray-light);
+        }
+
+        .map-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--jbr-blue);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 500px;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 61, 165, 0.15);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .map-container {
+                height: 400px;
+            }
+
+            .map-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .map-container {
+                height: 300px;
+            }
+
+            .map-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* ========= SEÇÃO HORÁRIO ========= */
+        .hours-section {
+            padding: 5rem 0;
+            background: var(--white);
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .hours-card {
+            background: var(--jbr-gray-light);
+            padding: 2rem;
+            border-radius: 1rem;
+            border-left: 4px solid var(--jbr-yellow);
+            text-align: center;
+        }
+
+        .hours-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--jbr-blue);
+            margin-bottom: 1rem;
+        }
+
+        .hours-content {
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .hours-content strong {
+            color: var(--jbr-yellow);
+        }
+
+        /* ========= FOOTER ========= */
+        .footer {
+            background: var(--jbr-blue);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 0.95rem;
+        }
+
+        /* ========= ANIMAÇÕES ========= */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-section,
+        .map-section,
+        .hours-section {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* ========= ACESSIBILIDADE ========= */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
