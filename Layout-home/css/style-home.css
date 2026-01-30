@@ -63,23 +63,32 @@ body {
   z-index: 5;
   padding-top: 30vh;
   padding-left: 60px;
+  font-size: 50px;
 
   /* ESSENCIAL PARA HABILITAR O SCROLL */
   padding-bottom: 40vh;
 }
 
+/* Animação Fluida para o Hero */
 .hero-title {
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.1;
-  color: #ffffff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  color: #ffffff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out 0.4s forwards; /* Atraso de 0.4s */
 }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .subtitle-highlight {
   color: #c7d430;
