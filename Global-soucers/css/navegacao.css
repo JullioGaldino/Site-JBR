@@ -47,39 +47,21 @@
   position: absolute;
   top: 80px;
   left: 20px;
+  display: flex;
+  gap: 10px;
   z-index: 9;
 }
 
 .certifications-list {
   display: flex;
-  gap: 0; /* Remove o espaço entre botões */
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  gap: 10px;
 }
 
-.certification-button {
+.certification-text {
   background: #e3e6ea;
-  color: #555;
-  padding: 8px 18px;
+  color: #333;
+  padding: 5px 14px;
+  border-radius: 0px 0px 5px 5px;
   font-size: 0.75rem;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-right: 1px solid rgba(0,0,0,0.05); /* Divisória sutil */
-}
-
-/* Arredondamento apenas nas pontas externas */
-.certifications-list li:first-child .certification-button {
-  border-radius: 0 0 0 12px;
-}
-
-.certifications-list li:last-child .certification-button {
-  border-radius: 0 0 12px 0;
-  border-right: none;
-}
-
-.certification-button:hover {
-  background: #d1d5db;
+  font-weight: 600;
 }
