@@ -31,33 +31,33 @@ import AbreuELima from "../../components/img/Projetos/Refinaria-Abreu-e-Lima.jpg
 function Home() {
 
     const projetos = [
-    { id: "via-mangue", titulo: "Via Mangue", img: ViaMangue },
-    { id: "triplicacao-pe-015", titulo: "Triplicação PE-015", img: TriplicacaoPE015 },
-    { id: "duplicacao-br-232", titulo: "Duplicação BR-232", img: DuplicacaoBR232 },
-    { id: "pavimentacao-br-135", titulo: "Pavimentação BR-135 PI", img: PavimentacaoBR135 },
-    { id: "ponte-rio-sao-francisco", titulo: "Ponte Rio São Francisco", img: PonteRioSaoFrancisco },
-    { id: "metro-recife", titulo: "Expansão do Metrô Recife", img: MetroRecife },
-    { id: "honda-amazonas", titulo: "Honda – Amazonas", img: HondaAmazonas },
-    { id: "transnordestina", titulo: "Ferrovia Transnordestina", img: Transnordestina },
-    { id: "abreu-e-lima", titulo: "Refinaria Abreu e Lima", img: AbreuELima },
+        { id: "via-mangue", titulo: "Via Mangue", img: ViaMangue },
+        { id: "triplicacao-pe-015", titulo: "Triplicação PE-015", img: TriplicacaoPE015 },
+        { id: "duplicacao-br-232", titulo: "Duplicação BR-232", img: DuplicacaoBR232 },
+        { id: "pavimentacao-br-135", titulo: "Pavimentação BR-135 PI", img: PavimentacaoBR135 },
+        { id: "ponte-rio-sao-francisco", titulo: "Ponte Rio São Francisco", img: PonteRioSaoFrancisco },
+        { id: "metro-recife", titulo: "Expansão do Metrô Recife", img: MetroRecife },
+        { id: "honda-amazonas", titulo: "Honda – Amazonas", img: HondaAmazonas },
+        { id: "transnordestina", titulo: "Ferrovia Transnordestina", img: Transnordestina },
+        { id: "abreu-e-lima", titulo: "Refinaria Abreu e Lima", img: AbreuELima },
     ]
 
     const clientes = [
-            { nome: "Sec. de Infraestrutura do RN", img: ClienteRN },
-            { nome: "Secretaria das Cidades (SECID/PE)", img: ClienteSECID },
-            { nome: "Grupo FCA", img: ClienteFCA },
-            { nome: "Departamento de Estradas de Rodagem (DER/PB)", img: ClienteDERPB },
-            { nome: "Companhia Brasileira de Trens Urbanos (CBTU/PE)", img: ClienteCBTU },
-            { nome: "Compesa/PE", img: ClienteCompesa },
-            { nome: "Complexo Industrial de Suape", img: ClienteSuape },
-            { nome: "Departamento de Estradas de Rodagem (DER/PE)", img: ClienteDERPE },
-            { nome: "Superintendência de Obras Públicas - SOP/CE", img: ClienteSOP },
-            { nome: "Departamento de Infraestrutura de Transportes (DNIT)", img: ClienteDNIT },
-            ]
+        { nome: "Sec. de Infraestrutura do RN", img: ClienteRN },
+        { nome: "Secretaria das Cidades (SECID/PE)", img: ClienteSECID },
+        { nome: "Grupo FCA", img: ClienteFCA },
+        { nome: "Departamento de Estradas de Rodagem (DER/PB)", img: ClienteDERPB },
+        { nome: "Companhia Brasileira de Trens Urbanos (CBTU/PE)", img: ClienteCBTU },
+        { nome: "Compesa/PE", img: ClienteCompesa },
+        { nome: "Complexo Industrial de Suape", img: ClienteSuape },
+        { nome: "Departamento de Estradas de Rodagem (DER/PE)", img: ClienteDERPE },
+        { nome: "Superintendência de Obras Públicas - SOP/CE", img: ClienteSOP },
+        { nome: "Departamento de Infraestrutura de Transportes (DNIT)", img: ClienteDNIT },
+    ]
             
   return (
     <>
-      <NavBar />
+      <NavBar className="z-50"/>
 
         {/* HERO */}
         <section className="relative min-h-screen w-full">
@@ -71,7 +71,7 @@ function Home() {
             <div className="absolute inset-0 bg-linear-to-t from-blue-800/100 via-bluefrom-blue-800/70 to-transparent" />
 
             {/* CONTEÚDO DO HERO */}
-            <div className="relative z-10 flex min-h-screen items-center px-8">
+            <div className="relative flex min-h-screen items-center px-8">
             <div className="flex flex-col gap-4">            
                 <h1 className="text-white text-8xl font-bold leading-none">JBR</h1>
                 <h2 className="text-white text-8xl font-bold leading-none">Engenharia</h2>
@@ -82,17 +82,14 @@ function Home() {
 
         {/* SEÇÃO EXPERIÊNCIA */}
         <section className="relative px-8 py-24 bg-blue-800">
-        <h2 className="mb-16 text-4xl font-bold text-white">
-            Experiência em{" "}
-            <span className="text-amber-300">projetos de grande porte</span>
-        </h2>
+        <h2 className="mb-10 text-4xl font-bold text-white">Experiência em{" "}<span className="text-amber-300">projetos de grande porte</span></h2>
 
         {/* GRID DE PROJETOS */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {projetos.map((projeto) => (
             <div
                 key={projeto.id}
-                className="relative group h-72 rounded-xl overflow-hidden"
+                className="relative group w-100 h-52 rounded-xl overflow-hidden"
                 style={{ backgroundImage: `url(${projeto.img})` }}
             >
                 {/* IMAGEM */}

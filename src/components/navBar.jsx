@@ -5,7 +5,7 @@ export default function NavBar() {
   const [menuMobile, setMenuMobile] = useState(false);
 
   return (
-    <nav className="relative h-20 rounded-bl-3xl rounded-br-3xl bg-white after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+    <nav className="z-100 relative h-20 rounded-bl-3xl rounded-br-3xl bg-white after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
       <div className="mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
 
@@ -55,13 +55,19 @@ export default function NavBar() {
 
       {/* Menu mobile */}
       {menuMobile && (
-        <div className="sm:hidden space-y-1 px-2 pt-2 pb-3">
-          <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">SOBRE A EMPRESA</a>
-          <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">SERVIÇOS</a>
-          <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">CLIENTES</a>
-          <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">PORTFÓLIO</a>
-          <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">INSTITUTO</a>
-          <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">CONTATO</a>
+        <div className="z-100 sm:hidden space-y-1 px-2 pt-2 pb-3">
+          <a href="#" className="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">
+            Dashboard
+          </a>
+          <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">
+            Team
+          </a>
+          <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">
+            Projects
+          </a>
+          <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">
+            Calendar
+          </a>
         </div>
       )}
     </nav>
