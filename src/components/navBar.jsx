@@ -3,7 +3,6 @@ import LogoJBR from "../components/img/Logo-JBR.jpg";
 
 export default function NavBar() {
   const [menuMobile, setMenuMobile] = useState(false);
-  const [menuPerfil, setMenuPerfil] = useState(false);
 
   return (
     <nav className="relative h-20 rounded-bl-3xl rounded-br-3xl bg-white after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
@@ -38,27 +37,14 @@ export default function NavBar() {
               />
             </div>
 
-            <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4 sm:ml-250 sm:mt-5">
-
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-blue-900 hover:bg-gray-100 hover:text-blue-900">
-                  Quem Somos
-                </a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-blue-900 hover:bg-gray-100 hover:text-blue-900">
-                  Serviços
-                </a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-blue-900 hover:bg-gray-100 hover:text-blue-900">
-                  Clientes
-                </a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-blue-900 hover:bg-gray-100 hover:text-blue-900">
-                  Portfólio
-                </a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-blue-900 hover:bg-gray-100 hover:text-blue-900">
-                  Instituto
-                </a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-blue-900 hover:bg-gray-100 hover:text-blue-900">
-                  Contato
-                </a>
+            <div className="hidden sm:block absolute right-6 top-1/2 -translate-y-1/2">
+              <div className="flex space-x-4 mt-5">
+                <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">SOBRE A EMPRESA</a>
+                <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">SERVIÇOS</a>
+                <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">CLIENTES</a>
+                <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">PORTFÓLIO</a>
+                <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">INSTITUTO</a>
+                <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">CONTATO</a>
               </div>
             </div>
           </div>
@@ -70,18 +56,12 @@ export default function NavBar() {
       {/* Menu mobile */}
       {menuMobile && (
         <div className="sm:hidden space-y-1 px-2 pt-2 pb-3">
-          <a href="#" className="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">
-            Dashboard
-          </a>
-          <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">
-            Team
-          </a>
-          <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">
-            Projects
-          </a>
-          <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">
-            Calendar
-          </a>
+          <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">SOBRE A EMPRESA</a>
+          <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">SERVIÇOS</a>
+          <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">CLIENTES</a>
+          <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">PORTFÓLIO</a>
+          <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">INSTITUTO</a>
+          <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">CONTATO</a>
         </div>
       )}
     </nav>
