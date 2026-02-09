@@ -9997,3 +9997,5 @@ node_modules/caniuse-lite/data/features/background-repeat-round-space.js
 node_modules/caniuse-lite/data/features/background-sync.js
 node_modules/caniuse-lite/data/features/battery-status.js
 node_modules/caniuse-lite/data/features/beacon.js
+node_modules/caniuse-lite/data/features/cross-document-view-transitions.js
+/node_modules
