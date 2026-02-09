@@ -1,12 +1,13 @@
 import { useState } from "react";
+import LogoJBR from "../components/img/Logo-JBR.jpg";
 
 export default function NavBar() {
   const [menuMobile, setMenuMobile] = useState(false);
   const [menuPerfil, setMenuPerfil] = useState(false);
 
   return (
-    <nav className="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <nav className="relative h-20 rounded-bl-3xl rounded-br-3xl bg-white after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+      <div className="mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
 
           {/* Botão menu mobile */}
@@ -31,31 +32,31 @@ export default function NavBar() {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
               <img
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Logo"
-                className="h-8 w-auto"
+                src={LogoJBR}
+                alt="Logo JBR"
+                className="h-15 w-auto sm:mt-2"
               />
             </div>
 
             <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-10 sm:ml-100">
+              <div className="flex space-x-4 sm:ml-250 sm:mt-5">
 
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-white hover:bg-white/5 hover:text-white">
+                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-blue-900 hover:bg-gray-100 hover:text-blue-900">
                   Quem Somos
                 </a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-white hover:bg-white/5 hover:text-white">
+                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-blue-900 hover:bg-gray-100 hover:text-blue-900">
                   Serviços
                 </a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-white hover:bg-white/5 hover:text-white">
+                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-blue-900 hover:bg-gray-100 hover:text-blue-900">
                   Clientes
                 </a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-white hover:bg-white/5 hover:text-white">
+                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-blue-900 hover:bg-gray-100 hover:text-blue-900">
                   Portfólio
                 </a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-white hover:bg-white/5 hover:text-white">
+                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-blue-900 hover:bg-gray-100 hover:text-blue-900">
                   Instituto
                 </a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-white hover:bg-white/5 hover:text-white">
+                <a href="#" className="rounded-md px-3 py-2 text-xm font-medium text-blue-900 hover:bg-gray-100 hover:text-blue-900">
                   Contato
                 </a>
               </div>
