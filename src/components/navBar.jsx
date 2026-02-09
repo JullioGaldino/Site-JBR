@@ -55,21 +55,51 @@ export default function NavBar() {
 
       {/* Menu mobile */}
       {menuMobile && (
-        <div className="z-100 sm:hidden space-y-1 px-2 pt-2 pb-3">
-          <a href="#" className="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">
-            Dashboard
+        <div className="sm:hidden px-4 pt-4 pb-6 space-y-2 bg-white/50 rounded-4xl">
+          <a
+            href="#"
+            className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100"
+          >
+            SOBRE A EMPRESA
           </a>
-          <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">
-            Team
+
+          <a
+            href="#"
+            className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100"
+          >
+            SERVIÇOS
           </a>
-          <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">
-            Projects
+
+          <a
+            href="#"
+            className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100"
+          >
+            CLIENTES
           </a>
-          <a href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">
-            Calendar
+
+          <a
+            href="#"
+            className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100"
+          >
+            PORTFÓLIO
+          </a>
+
+          <a
+            href="#"
+            className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100"
+          >
+            INSTITUTO
+          </a>
+
+          <a
+            href="#"
+            className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100"
+          >
+            CONTATO
           </a>
         </div>
       )}
+
     </nav>
   );
 }
