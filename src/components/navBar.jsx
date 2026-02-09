@@ -55,48 +55,13 @@ export default function NavBar() {
 
       {/* Menu mobile */}
       {menuMobile && (
-        <div className="z-100 sm:hidden px-4 pt-4 pb-6 space-y-2 bg-white/50 rounded-4xl">
-          <a
-            href="#"
-            className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100"
-          >
-            SOBRE A EMPRESA
-          </a>
-
-          <a
-            href="#"
-            className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100"
-          >
-            SERVIÇOS
-          </a>
-
-          <a
-            href="#"
-            className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100"
-          >
-            CLIENTES
-          </a>
-
-          <a
-            href="#"
-            className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100"
-          >
-            PORTFÓLIO
-          </a>
-
-          <a
-            href="#"
-            className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100"
-          >
-            INSTITUTO
-          </a>
-
-          <a
-            href="#"
-            className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100"
-          >
-            CONTATO
-          </a>
+        <div className="z-100 mt-10 sm:hidden px-4 pt-4 pb-6 space-y-2 bg-white/50 rounded-4xl">
+          <a href="#" className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100">SOBRE A EMPRESA</a>
+          <a href="#" className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100">SERVIÇOS</a>
+          <a href="#" className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100">CLIENTES</a>
+          <a href="#" className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100">PORTFÓLIO</a>
+          <a href="#" className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100">INSTITUTO</a>
+          <a href="#" className="block rounded-md px-4 py-3 text-base font-bold text-blue-900 bg-white/90 hover:bg-gray-100">CONTATO</a>
         </div>
       )}
 
