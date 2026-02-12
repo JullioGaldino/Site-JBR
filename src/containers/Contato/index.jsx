@@ -195,16 +195,19 @@ export default function Contato() {
             Localização
           </h2>
 
-          <div className="rounded-xl overflow-hidden shadow-lg h-[400px]">
+          <div className="rounded-2xl overflow-hidden shadow-2xl h-[400px]">
             <iframe
-              title="Mapa JBR"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.2959547824997!2d-34.9240995!3d-8.031375!2m3!1f0!2f0!3f0!2f0!3f0!"
+              title="Mapa JBR Engenharia"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.2959547824997!2d-34.9240995!3d-8.031375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19a6c3075867%3A0x2908fddabea98a39!2sR.%20Irm%C3%A3%20Maria%20David%2C%20297%20-%20Casa%20Forte%2C%20Recife%20-%20PE%2C%2052061-070!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
               className="w-full h-full border-0"
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             ></iframe>
           </div>
         </div>
       </section>
+
 
       {/* HORÁRIOS */}
       <section className="py-20 px-6 bg-white">
