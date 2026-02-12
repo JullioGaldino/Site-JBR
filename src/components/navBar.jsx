@@ -31,17 +31,20 @@ export default function NavBar() {
           {/* Logo + Menu desktop */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <img
-                src={LogoJBR}
-                alt="Logo JBR"
-                className="h-15 w-auto sm:mt-2"
-              />
+              <Link to={"/"}>
+                <img src={LogoJBR} alt="Logo JBR" className="h-12 w-auto sm:mt-2"/>
+              </Link>
+              
             </div>
 
             <div className="hidden sm:block absolute right-6 top-1/2 -translate-y-1/2">
               <div className="flex space-x-4 mt-5">
-                <Link to="/" className="rounded-md px-3 py-2 font-bold text-blue-900">HOME</Link>
                 <Link to="/sobre" className="rounded-md px-3 py-2 font-bold text-blue-900">SOBRE A EMPRESA</Link>
+                <Link to="/servicos" className="rounded-md px-3 py-2 font-bold text-blue-900">SERVIÇOS</Link>
+                <Link to="/clientes" className="rounded-md px-3 py-2 font-bold text-blue-900">CLIENTES</Link>
+                <Link to="/portfolio" className="rounded-md px-3 py-2 font-bold text-blue-900">PORTFÓLIO</Link>
+                <Link to="/instituto" className="rounded-md px-3 py-2 font-bold text-blue-900">INSTITUTO</Link>
+                <Link to="/contato" className="rounded-md px-3 py-2 font-bold text-blue-900">CONTATO</Link>
               </div>
             </div>
           </div>

@@ -1,6 +1,4 @@
-import NavBar from "../../components/navBar"
-// import Sede from "../../components/img/Sede.jpg"
-// import Equipe from "../../components/img/Equipe-colaborando.jpg"
+import NavBar from "../../components/navBar";
 
 function Sobre() {
   return (
@@ -23,8 +21,10 @@ function Sobre() {
       {/* SOBRE */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="rounded-2xl border-4 border-amber-400 overflow-hidden shadow-xl">
-            <img src={Sede} alt="Sede JBR" className="w-full h-full object-cover" />
+
+          {/* BLOCO IMAGEM (exemplo) */}
+          <div className="rounded-2xl border-4 border-amber-400 overflow-hidden shadow-xl h-64 bg-gray-300 flex items-center justify-center">
+            <span className="text-gray-600">Imagem da Sede aqui</span>
           </div>
 
           <div>
@@ -61,11 +61,8 @@ function Sobre() {
           <h2 className="text-3xl font-bold text-blue-800 mb-4">
             Áreas de Expertise
           </h2>
-          <p className="text-gray-600 mb-12">
-            Competência técnica em múltiplas disciplinas
-          </p>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-12">
             {[
               "Engenharia Rodoviária",
               "Engenharia Metroviária",
@@ -88,8 +85,10 @@ function Sobre() {
       {/* MISSÃO & VISÃO */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="rounded-2xl border-4 border-amber-400 overflow-hidden shadow-xl">
-            <img src={Equipe} alt="Equipe colaborando" />
+
+          {/* BLOCO IMAGEM (exemplo) */}
+          <div className="rounded-2xl border-4 border-amber-400 overflow-hidden shadow-xl h-64 bg-gray-300 flex items-center justify-center">
+            <span className="text-gray-600">Imagem da Equipe aqui</span>
           </div>
 
           <div>
@@ -147,7 +146,7 @@ function Sobre() {
         </button>
       </section>
     </>
-  )
+  );
 }
 
-export default Sobre
+export default Sobre;
