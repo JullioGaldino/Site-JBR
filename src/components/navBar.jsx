@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LogoJBR from "../components/img/Logo-JBR.jpg";
+import { Link } from "react-router-dom"
 
 export default function NavBar() {
   const [menuMobile, setMenuMobile] = useState(false);
@@ -39,12 +40,8 @@ export default function NavBar() {
 
             <div className="hidden sm:block absolute right-6 top-1/2 -translate-y-1/2">
               <div className="flex space-x-4 mt-5">
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">SOBRE A EMPRESA</a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">SERVIÇOS</a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">CLIENTES</a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">PORTFÓLIO</a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">INSTITUTO</a>
-                <a href="#" className="rounded-md px-3 py-2 text-xm font-bold text-blue-900 hover:bg-gray-100 hover:text-blue-900">CONTATO</a>
+                <Link to="/" className="rounded-md px-3 py-2 font-bold text-blue-900">HOME</Link>
+                <Link to="/sobre" className="rounded-md px-3 py-2 font-bold text-blue-900">SOBRE A EMPRESA</Link>
               </div>
             </div>
           </div>
