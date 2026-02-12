@@ -39,12 +39,12 @@ export default function NavBar() {
 
             <div className="hidden sm:block absolute right-6 top-1/2 -translate-y-1/2">
               <div className="flex space-x-4 mt-5">
-                <Link to="/sobre" className="rounded-md px-3 py-2 font-bold text-blue-900">SOBRE A EMPRESA</Link>
-                <Link to="/servicos" className="rounded-md px-3 py-2 font-bold text-blue-900">SERVIÇOS</Link>
-                <Link to="/clientes" className="rounded-md px-3 py-2 font-bold text-blue-900">CLIENTES</Link>
-                <Link to="/portfolio" className="rounded-md px-3 py-2 font-bold text-blue-900">PORTFÓLIO</Link>
-                <Link to="/instituto" className="rounded-md px-3 py-2 font-bold text-blue-900">INSTITUTO</Link>
-                <Link to="/contato" className="rounded-md px-3 py-2 font-bold text-blue-900">CONTATO</Link>
+                <Link to="/sobre" className="rounded-md px-3 py-2 font-bold text-blue-900 hover:bg-gray-300">SOBRE A EMPRESA</Link>
+                <Link to="/servicos" className="rounded-md px-3 py-2 font-bold text-blue-900 hover:bg-gray-300">SERVIÇOS</Link>
+                <Link to="/clientes" className="rounded-md px-3 py-2 font-bold text-blue-900 hover:bg-gray-300">CLIENTES</Link>
+                <Link to="/portfolio" className="rounded-md px-3 py-2 font-bold text-blue-900 hover:bg-gray-300">PORTFÓLIO</Link>
+                <Link to="/instituto" className="rounded-md px-3 py-2 font-bold text-blue-900 hover:bg-gray-300">INSTITUTO</Link>
+                <Link to="/contato" className="rounded-md px-3 py-2 font-bold text-blue-900 hover:bg-gray-300">CONTATO</Link>
               </div>
             </div>
           </div>

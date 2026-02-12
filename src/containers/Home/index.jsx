@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import NavBar from "../../components/navBar";
 
-// Imagens
+// Imagens Projetos
 import ViaMangue from "../../components/img/Projetos/Via-mangue.jpg";
 import TriplicacaoPE015 from "../../components/img/Projetos/Triplicação-PE.jpg";
 import DuplicacaoBR232 from "../../components/img/Projetos/Duplicação-BR-232-PE.jpg";
@@ -11,6 +11,18 @@ import MetroRecife from "../../components/img/Projetos/Expansão-do-Metrô-de-Re
 import HondaAmazonas from "../../components/img/Projetos/Moto-Honda-da-Amazônia.jpg";
 import Transnordestina from "../../components/img/Projetos/Ferrovia-Transnordestina.jpg";
 import AbreuELima from "../../components/img/Projetos/Refinaria-Abreu-e-Lima.jpg";
+// Imagens Clientes
+import ClienteRN from "../../components/img/Clientes/Sec. De Infraestrutura do RN.jpg"
+import ClienteSECID from "../../components/img/Clientes/SECRETARIA DAS CIDADES (SECID-PE).jpg"
+import ClienteFCA from "../../components/img/Clientes/Grupo FCA.jpg"
+import ClienteDERPB from "../../components/img/Clientes/Departamento de Estradas de Rodagem (DER-PB).jpg"
+import ClienteCBTU from "../../components/img/Clientes/Companhia Brasileira de Trens Urbanos (CBTU0-PE).jpg"
+import ClienteCompesa from "../../components/img/Clientes/Compesa-PE.jpg"
+import ClienteSuape from "../../components/img/Clientes/Complexo Industrial de Suape.jpg"
+import ClienteDERPE from "../../components/img/Clientes/Departamento de Estradas de Rodagem (DER-PE).jpg"
+import ClienteSOP from "../../components/img/Clientes/SUPERINTENDÊNCIA DE OBRAS PÚBLICAS - SOP-CE.jpg"
+import ClienteDNIT from "../../components/img/Clientes/Departamento de Infraestrutura de Transportes (DNIT).jpg"
+
 
 function Home() {
   const projetos = [
@@ -24,6 +36,19 @@ function Home() {
     { id: "transnordestina", titulo: "Ferrovia Transnordestina", img: Transnordestina },
     { id: "abreu-lima", titulo: "Refinaria Abreu e Lima", img: AbreuELima },
   ];
+
+  const clientes = [
+    { nome: "Sec. de Infraestrutura do RN", img: ClienteRN },
+    { nome: "Secretaria das Cidades (SECID/PE)", img: ClienteSECID },
+    { nome: "Grupo FCA", img: ClienteFCA },
+    { nome: "DER/PB", img: ClienteDERPB },
+    { nome: "CBTU/PE", img: ClienteCBTU },
+    { nome: "Compesa/PE", img: ClienteCompesa },
+    { nome: "Complexo de Suape", img: ClienteSuape },
+    { nome: "DER/PE", img: ClienteDERPE },
+    { nome: "SOP/CE", img: ClienteSOP },
+    { nome: "DNIT", img: ClienteDNIT },
+  ]
 
   return (
     <>
@@ -102,34 +127,41 @@ function Home() {
 
       {/* CLIENTES */}
       <section className="bg-blue-900 px-6 md:px-16 py-24">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-16">
-          Nossos clientes
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-16 text-center">
+          Nossos Clientes
         </h2>
 
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-          {[
-            "Sec. de Infraestrutura do RN",
-            "Secretaria das Cidades (SECID/PE)",
-            "Grupo FCA",
-            "DER/PB",
-            "CBTU/PE",
-            "Compesa/PE",
-            "Complexo de Suape",
-            "DER/PE",
-            "SOP/CE",
-            "DNIT",
-          ].map((nome, i) => (
+          {clientes.map((cliente, i) => (
             <div
               key={i}
-              className="relative bg-white h-32 rounded-2xl flex items-center justify-center group shadow-lg hover:-translate-y-2 transition"
+              className="relative bg-white h-32 rounded-2xl 
+                        flex items-center justify-center 
+                        overflow-hidden group shadow-lg 
+                        hover:-translate-y-2 transition-all duration-300"
             >
-              <span className="text-blue-900 font-semibold text-center px-4 opacity-0 group-hover:opacity-100 transition">
-                {nome}
-              </span>
+              {/* IMAGEM */}
+              <img
+                src={cliente.img}
+                alt={cliente.nome}
+                className="max-h-20 object-contain transition duration-300 
+                          group-hover:scale-105"
+              />
+
+              {/* OVERLAY NO HOVER */}
+              <div className="absolute inset-0 bg-blue-900/90 
+                              flex items-center justify-center 
+                              opacity-0 group-hover:opacity-100 
+                              transition duration-300 px-4 text-center">
+                <span className="text-white font-semibold text-sm">
+                  {cliente.nome}
+                </span>
+              </div>
             </div>
           ))}
         </div>
       </section>
+
 
       {/* FOOTER CORPORATIVO */}
       <footer className="bg-white py-16 px-6 md:px-16">
