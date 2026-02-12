@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import NavBar from "../../components/navBar";
 
-// IMPORTAR IMAGENS
+/* ================= IMAGENS ================= */
 import BR232 from "../../components/img/Projetos/Duplicação-BR-232-PE.jpg";
 import BR101 from "../../components/img/Projetos/Supervisão-BR-101.jpg";
 import BR104 from "../../components/img/Projetos/Restauração-BR-104-PE.jpg";
 import BR135 from "../../components/img/Projetos/Pavimentação-BR-135-PI.jpg";
-import PE015 from "../../components/img/Projetos/Triplicação-PE.jpg";
+import PE015 from "../../components/img/Projetos/Triplicacao-PE.jpg";
 import ViaMangue from "../../components/img/Projetos/Projeto-Via-Mangue.jpg";
 import ProjetoConvida from "../../components/img/Projetos/Projeto-Convida.jpg";
 import MetroExpansao from "../../components/img/Projetos/Expansão-do-Metrô-de-Recife.jpg";
@@ -26,166 +26,22 @@ function Portfolio() {
   const [searchParams] = useSearchParams();
 
   const projetos = [
-    {
-      id: "br-232",
-      titulo: "BR-232 – Duplicação e Restauração",
-      tipo: "Infraestrutura Rodoviária",
-      categoria: "rodoviaria",
-      local: "📍 Pernambuco",
-      descricao: "Obra rodoviária com extensão aproximada de 124 km.",
-      tags: ["Duplicação", "124 km"],
-      img: BR232,
-    },
-    {
-      id: "br-101",
-      titulo: "BR-101",
-      tipo: "Infraestrutura Rodoviária",
-      categoria: "rodoviaria",
-      local: "📍 Eixo Nacional",
-      descricao: "Implantação e adequação da rodovia.",
-      tags: ["Adequação", "Nacional"],
-      img: BR101,
-    },
-    {
-      id: "br-104",
-      titulo: "BR-104",
-      tipo: "Infraestrutura Rodoviária",
-      categoria: "rodoviaria",
-      local: "📍 Nordeste",
-      descricao: "Modernização e melhoria da malha viária.",
-      tags: ["Modernização", "Malha Viária"],
-      img: BR104,
-    },
-    {
-      id: "br-135",
-      titulo: "BR-135",
-      tipo: "Infraestrutura Rodoviária",
-      categoria: "rodoviaria",
-      local: "📍 Escoamento Logístico",
-      descricao: "Trecho estratégico para escoamento logístico.",
-      tags: ["Logística", "Estratégico"],
-      img: BR135,
-    },
-    {
-      id: "pe-015",
-      titulo: "PE-015 – Triplicação",
-      tipo: "Infraestrutura Rodoviária",
-      categoria: "rodoviaria",
-      local: "📍 Pernambuco",
-      descricao: "Ampliação da capacidade viária.",
-      tags: ["Triplicação", "Mobilidade"],
-      img: PE015,
-    },
-    {
-      id: "via-mangue",
-      titulo: "Via Mangue",
-      tipo: "Mobilidade Urbana",
-      categoria: "mobilidade",
-      local: "📍 Recife",
-      descricao: "Obra de mobilidade urbana de grande porte.",
-      tags: ["Mobilidade", "Pontes"],
-      img: ViaMangue,
-    },
-    {
-      id: "projeto-convida",
-      titulo: "Projeto Convida",
-      tipo: "Mobilidade Urbana",
-      categoria: "mobilidade",
-      local: "📍 Requalificação Urbana",
-      descricao: "Requalificação viária e urbana.",
-      tags: ["Requalificação", "Urbano"],
-      img: ProjetoConvida,
-    },
-    {
-      id: "metro-expansao",
-      titulo: "Metrô do Recife – Expansão",
-      tipo: "Infraestrutura Ferroviária",
-      categoria: "ferroviaria",
-      local: "📍 Recife",
-      descricao: "Ampliação do sistema metroviário.",
-      tags: ["Metrô", "Expansão"],
-      img: MetroExpansao,
-    },
-    {
-      id: "metro-supervisao",
-      titulo: "Metrô do Recife – Supervisão",
-      tipo: "Infraestrutura Ferroviária",
-      categoria: "ferroviaria",
-      local: "📍 Recife",
-      descricao: "Supervisão e acompanhamento técnico.",
-      tags: ["Supervisão", "Técnico"],
-      img: MetroSupervisao,
-    },
-    {
-      id: "transnordestina",
-      titulo: "Ferrovia Transnordestina",
-      tipo: "Infraestrutura Ferroviária",
-      categoria: "ferroviaria",
-      local: "📍 Nordeste",
-      descricao: "Projeto ferroviário de grande porte.",
-      tags: ["Ferrovia", "Cargas"],
-      img: Transnordestina,
-    },
-    {
-      id: "abreu-lima",
-      titulo: "Refinaria Abreu e Lima",
-      tipo: "Projetos Industriais",
-      categoria: "industrial",
-      local: "📍 Pernambuco",
-      descricao: "Empreendimento industrial de grande escala.",
-      tags: ["Petróleo", "Energia"],
-      img: AbreuLima,
-    },
-    {
-      id: "honda",
-      titulo: "Moto Honda da Amazônia",
-      tipo: "Projetos Industriais",
-      categoria: "industrial",
-      local: "📍 Amazonas",
-      descricao: "Infraestrutura industrial fabril.",
-      tags: ["Manufatura", "Fabril"],
-      img: Honda,
-    },
-    {
-      id: "usina",
-      titulo: "Usina Termoelétrica de Mauazinho",
-      tipo: "Projetos Industriais",
-      categoria: "industrial",
-      local: "📍 Geração de Energia",
-      descricao: "Projeto voltado à geração de energia.",
-      tags: ["Energia", "Termoelétrica"],
-      img: Usina,
-    },
-    {
-      id: "base-combustivel",
-      titulo: "Base de Distribuição de Combustíveis",
-      tipo: "Projetos Industriais",
-      categoria: "industrial",
-      local: "📍 Distribuição",
-      descricao: "Infraestrutura para armazenamento.",
-      tags: ["Armazenamento", "Distribuição"],
-      img: BaseCombustivel,
-    },
-    {
-      id: "ponte-sf",
-      titulo: "Ponte sobre o Rio São Francisco",
-      tipo: "Obras Especiais",
-      categoria: "especiais",
-      local: "📍 Rio São Francisco",
-      descricao: "Obra de arte especial de grande porte.",
-      tags: ["Ponte", "Arte Especial"],
-      img: PonteSF,
-    },
-    {
-      id: "promata",
-      titulo: "Triagem e Compostagem – PROMATA",
-      tipo: "Saneamento e Meio Ambiente",
-      categoria: "saneamento",
-      local: "📍 Gestão Ambiental",
-      descricao: "Tratamento de resíduos sólidos.",
-      tags: ["Sustentabilidade", "Resíduos"],
-      img: Promata,
-    },
+    { id: "br-232", titulo: "BR-232 – Duplicação", tipo: "Rodoviária", categoria: "rodoviaria", local: "Pernambuco", descricao: "Extensão aproximada de 124 km.", img: BR232 },
+    { id: "br-101", titulo: "BR-101", tipo: "Rodoviária", categoria: "rodoviaria", local: "Eixo Nacional", descricao: "Implantação e adequação.", img: BR101 },
+    { id: "br-104", titulo: "BR-104", tipo: "Rodoviária", categoria: "rodoviaria", local: "Nordeste", descricao: "Modernização da malha viária.", img: BR104 },
+    { id: "br-135", titulo: "BR-135", tipo: "Rodoviária", categoria: "rodoviaria", local: "Logística", descricao: "Trecho estratégico logístico.", img: BR135 },
+    { id: "pe-015", titulo: "PE-015 – Triplicação", tipo: "Rodoviária", categoria: "rodoviaria", local: "Pernambuco", descricao: "Ampliação viária.", img: PE015 },
+    { id: "via-mangue", titulo: "Via Mangue", tipo: "Mobilidade", categoria: "mobilidade", local: "Recife", descricao: "Mobilidade urbana de grande porte.", img: ViaMangue },
+    { id: "projeto-convida", titulo: "Projeto Convida", tipo: "Mobilidade", categoria: "mobilidade", local: "Requalificação Urbana", descricao: "Infraestrutura urbana.", img: ProjetoConvida },
+    { id: "metro-expansao", titulo: "Metrô – Expansão", tipo: "Ferroviária", categoria: "ferroviaria", local: "Recife", descricao: "Ampliação metroviária.", img: MetroExpansao },
+    { id: "metro-supervisao", titulo: "Metrô – Supervisão", tipo: "Ferroviária", categoria: "ferroviaria", local: "Recife", descricao: "Supervisão técnica.", img: MetroSupervisao },
+    { id: "transnordestina", titulo: "Transnordestina", tipo: "Ferroviária", categoria: "ferroviaria", local: "Nordeste", descricao: "Transporte ferroviário de cargas.", img: Transnordestina },
+    { id: "abreu-lima", titulo: "Refinaria Abreu e Lima", tipo: "Industrial", categoria: "industrial", local: "Pernambuco", descricao: "Empreendimento industrial.", img: AbreuLima },
+    { id: "honda", titulo: "Moto Honda", tipo: "Industrial", categoria: "industrial", local: "Amazonas", descricao: "Infraestrutura fabril.", img: Honda },
+    { id: "usina", titulo: "Usina Termoelétrica", tipo: "Industrial", categoria: "industrial", local: "Energia", descricao: "Geração energética.", img: Usina },
+    { id: "base-combustivel", titulo: "Base Combustíveis", tipo: "Industrial", categoria: "industrial", local: "Distribuição", descricao: "Armazenamento estratégico.", img: BaseCombustivel },
+    { id: "ponte-sf", titulo: "Ponte Rio São Francisco", tipo: "Especial", categoria: "especiais", local: "Rio São Francisco", descricao: "Obra de arte especial.", img: PonteSF },
+    { id: "promata", titulo: "PROMATA", tipo: "Saneamento", categoria: "saneamento", local: "Gestão Ambiental", descricao: "Tratamento ambiental.", img: Promata },
   ];
 
   const categorias = [
@@ -215,31 +71,29 @@ function Portfolio() {
     <>
       <NavBar />
 
-      <section className="bg-white py-24 px-6">
+      {/* ================= SEÇÃO ================= */}
+      <section className="bg-gradient-to-b from-blue-950 to-blue-900 px-6 py-24">
         <div className="max-w-7xl mx-auto">
 
           {/* HEADER */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-blue-900">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-white">
               Portfólio de Projetos
             </h2>
-            <p className="mt-4 text-gray-600">
-              Experiência técnica em infraestrutura e engenharia
-            </p>
-            <div className="w-32 h-1 mx-auto mt-6 bg-gradient-to-r from-amber-400 to-blue-900 rounded"></div>
+            <div className="w-24 h-1 bg-amber-400 mx-auto mt-6 rounded"></div>
           </div>
 
           {/* FILTROS */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
+          <div className="flex flex-wrap justify-center gap-4 mb-20">
             {categorias.map((cat) => (
               <button
                 key={cat.value}
                 onClick={() => setFilter(cat.value)}
-                className={`px-6 py-2 rounded-full border-2 font-semibold transition
+                className={`px-6 py-2 rounded-full font-semibold transition duration-300
                 ${
                   filter === cat.value
-                    ? "bg-blue-900 text-white border-blue-900"
-                    : "border-gray-300 text-gray-700 hover:border-amber-400"
+                    ? "bg-amber-400 text-blue-950"
+                    : "bg-blue-800 text-white hover:bg-blue-700"
                 }`}
               >
                 {cat.label}
@@ -248,39 +102,49 @@ function Portfolio() {
           </div>
 
           {/* GRID */}
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {projetosFiltrados.map((projeto) => (
               <div
                 key={projeto.id}
-                className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition hover:-translate-y-2"
+                className="group relative bg-blue-800/70 backdrop-blur-sm border border-blue-700 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500"
               >
-                <div className="relative h-60 overflow-hidden">
+                {/* IMAGEM */}
+                <div className="relative h-52 overflow-hidden">
                   <img
                     src={projeto.img}
                     alt={projeto.titulo}
-                    className="w-full h-full object-cover group-hover:scale-105 transition"
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                   />
-
-                  <div className="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                    <button
-                      onClick={() => setSelectedProject(projeto)}
-                      className="bg-amber-400 px-6 py-2 rounded-full font-semibold text-blue-900"
-                    >
-                      Ver Detalhes
-                    </button>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-950/90 to-transparent"></div>
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-blue-900">
+                {/* CONTEÚDO */}
+                <div className="p-6 relative">
+                  {/* Linha estrutural */}
+                  <div className="absolute left-0 top-6 bottom-6 w-1 bg-amber-400 rounded"></div>
+
+                  <span className="text-xs uppercase tracking-wider text-amber-400 font-semibold ml-4">
+                    {projeto.tipo}
+                  </span>
+
+                  <h3 className="text-lg font-bold text-white mt-2 ml-4">
                     {projeto.titulo}
                   </h3>
-                  <p className="text-sm text-amber-500 font-semibold mt-1">
-                    {projeto.tipo}
+
+                  <p className="text-sm text-blue-200 mt-2 ml-4">
+                    📍 {projeto.local}
                   </p>
-                  <p className="text-sm text-gray-600 mt-2">
-                    {projeto.local}
+
+                  <p className="text-sm text-blue-100 mt-4 ml-4 leading-relaxed">
+                    {projeto.descricao}
                   </p>
+
+                  <button
+                    onClick={() => setSelectedProject(projeto)}
+                    className="mt-6 ml-4 bg-amber-400 text-blue-950 px-5 py-2 rounded-full font-bold text-sm hover:scale-105 transition"
+                  >
+                    Ver Projeto
+                  </button>
                 </div>
               </div>
             ))}
@@ -288,46 +152,30 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* MODAL */}
+      {/* ================= MODAL ================= */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl p-8 w-[90%] max-w-2xl relative">
-
+        <div className="fixed inset-0 bg-blue-950/90 flex items-center justify-center z-50">
+          <div className="bg-blue-900 border border-blue-700 rounded-2xl p-8 w-[90%] max-w-2xl relative shadow-2xl">
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 text-2xl text-blue-900"
+              className="absolute top-4 right-4 text-2xl text-white"
             >
               ✕
             </button>
 
-            <h2 className="text-2xl font-extrabold text-blue-900 mb-2">
+            <h2 className="text-2xl font-extrabold text-white mb-4">
               {selectedProject.titulo}
             </h2>
-
-            <p className="text-amber-500 font-semibold mb-4">
-              {selectedProject.tipo}
-            </p>
 
             <img
               src={selectedProject.img}
               alt={selectedProject.titulo}
-              className="w-full h-64 object-cover rounded-lg mb-4"
+              className="w-full h-64 object-cover rounded-lg mb-6"
             />
 
-            <p className="text-gray-700 mb-4">
+            <p className="text-blue-200">
               {selectedProject.descricao}
             </p>
-
-            <div className="flex flex-wrap gap-2">
-              {selectedProject.tags.map((tag, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 bg-gray-100 text-blue-900 text-sm rounded-full"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       )}
