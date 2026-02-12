@@ -1,3 +1,11 @@
 @import "tailwindcss";
 
+@keyframes roadMove {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -40; }
+}
+
+.animate-road {
+  animation: roadMove 2s linear infinite;
+}
 
