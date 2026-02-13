@@ -9,3 +9,11 @@
   animation: roadMove 2s linear infinite;
 }
 
+body {
+  background-color: var(--color-blue-800) /* oklch(42.4% 0.199 265.638) = #193cb8 */;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+

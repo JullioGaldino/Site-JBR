@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import NavBar from "../../components/navBar";
 import { useEffect, useState } from "react";
+import IconBounce from "../../components/iconBounce";
 
 /* ================= IMAGENS PROJETOS ================= */
 import ViaMangue from "../../components/img/Projetos/Via-mangue.jpg";
@@ -130,7 +131,6 @@ function Home() {
       img: AbreuELima,
     },
   ];
-
   const clientes = [
     { nome: "Sec. Infraestrutura RN", img: ClienteRN },
     { nome: "SECID/PE", img: ClienteSECID },
@@ -187,7 +187,6 @@ function Home() {
   );
 }
 
-
   return (
     <>
       <NavBar />
@@ -198,20 +197,22 @@ function Home() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${ViaMangue})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-blue-900/70 to-blue-900" />
-        <div className="relative z-10 text-white">
-          <h1 className="text-6xl font-bold">JBR Engenharia</h1>
-          <p className="mt-6 text-xl">
-            Criando soluções{" "}
-            <span className="text-amber-400 font-semibold">
-              inteligentes
-            </span>
-          </p>
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-800/80 via-blue-900/70 to-blue-900" />
+        <div className="relative z-10 text-white mb-100">
+          <h1 className="text-white text-5xl sm:text-7xl lg:text-8xl font-bold leading-none">JBR</h1>
+          <h2 className="text-white text-5xl sm:text-7xl lg:text-8xl font-bold leading-none">Engenharia</h2>
+          <p className="mt-4 text-white text-xl sm:text-3xl lg:text-4xl">Criando soluções <span className="text-amber-300">inteligentes</span>
+            </p>
         </div>
+        
+        <a href="#Projetos"><IconBounce targetId="Projetos" className="absolute bottom-25 left-1/2 -translate-x-1/2 text-white size-20"/></a>
+
+
+        
       </section>
 
       {/* EXPERIÊNCIA CORPORATIVA DINÂMICA */}
-      <section className="relative bg-blue-900 px-6 md:px-16 py-32 overflow-hidden">
+      <section id="Projetos" className="relative bg-blue-900 px-6 md:px-16 py-32 overflow-hidden">
 
         {/* GRID TÉCNICO DE FUNDO */}
         <div className="absolute inset-0 opacity-10">

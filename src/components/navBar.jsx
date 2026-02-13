@@ -6,7 +6,7 @@ export default function NavBar() {
   const [menuMobile, setMenuMobile] = useState(false);
 
   return (
-    <nav className="z-200 relative h-20 rounded-bl-3xl rounded-br-3xl bg-white after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+    <nav className="z-20 relative h-20 rounded-bl-4xl rounded-br-4xl bg-white after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
       <div className="mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
 
